@@ -1,8 +1,7 @@
 
 function getRepositories() {
   const req = new XMLHttpRequest();
-  
-  req.open('GET', 'https://api.github.com/users/octocat/repos')
+  req.addEventListener('load', showRespositories('GET', 'https://api.github.com/octocat/repos'))
   req.send();
 }
 
