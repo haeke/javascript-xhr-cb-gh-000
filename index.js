@@ -6,6 +6,12 @@ function showRepositories(event, data) {
   document.getElementById("repositories").innerHTML = repoList;
 }
 
+function showCommits() {
+  const commits = JSON.parse(this.responseText);
+  const commitsList = `<ul>${commits.map(commit) => '<li><strong>' + commit.author.login + '</strong> - ' + commit.commit.message + '</li>').join('')}
+  </ul>`;
+}
+
 function getCommits(el) {
   console.log(this);
   const name = el.dataset.repo;
