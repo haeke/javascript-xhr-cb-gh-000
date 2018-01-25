@@ -6,7 +6,7 @@ function showRepositories(event, data) {
     repoList += "<li>" + this.responseText[i]["name"] + "</li>"
   }
   repoList += "</ul>"
-  document.getElementById("repositories").innerHTML = repoList
+  document.getElementById("repositories").innerHTML = repoList;
 }
 
 function getRepositories() {
